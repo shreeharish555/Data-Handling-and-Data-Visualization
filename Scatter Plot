@@ -1,0 +1,12 @@
+# Dataset
+hours_studied <- c(3, 5, 7, 2, 8, 6, 4, 9)
+exam_scores <- c(65, 80, 85, 60, 90, 75, 70, 95)
+
+# Create scatter plot
+plot(hours_studied, exam_scores, 
+     col = 'blue',                 # Color of points
+     xlab = 'Hours Studied',       # X-axis label
+     ylab = 'Exam Scores',         # Y-axis label
+     main = 'Relationship between Hours Studied and Exam Scores'  # Title
+)
+
