@@ -1,1 +1,8 @@
 
+# Dataset
+categories <- c('Rent', 'Groceries', 'Utilities', 'Entertainment')
+expenses <- c(30, 25, 20, 25)
+
+# Create pie chart
+pie(expenses, labels = categories, main = 'Household Budget Distribution', col = rainbow(length(categories)))
+
