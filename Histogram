@@ -1,0 +1,5 @@
+# Create dataframe
+data <- data.frame(ages = c(22, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80))
+
+# Create histogram
+hist(data$ages, breaks = seq(20, 85, by = 7), col = 'skyblue', border = 'black', xlab = 'Age', ylab = 'Frequency', main = 'Age Distribution')
