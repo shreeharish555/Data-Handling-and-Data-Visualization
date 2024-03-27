@@ -1,0 +1,7 @@
+# Generate example data
+months <- 1:12
+sales <- sample(10000:50000, 12, replace=TRUE)
+
+# Create line chart
+plot(months, sales, type='o', col='blue', xlab='Month', ylab='Sales', main='Monthly Sales Performance')
+
