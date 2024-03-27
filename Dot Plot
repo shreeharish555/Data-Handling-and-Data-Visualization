@@ -1,0 +1,9 @@
+# Example data
+products <- c('Product A', 'Product B', 'Product C', 'Product D', 'Product E')
+ratings <- c(4.5, 3.8, 4.2, 4.7, 3.9)
+
+# Create dot plot
+plot(ratings, seq_along(products), pch = 19, col = 'blue', xlim = c(0, 5), 
+     xlab = 'Rating', ylab = 'Product', yaxt = 'n', main = 'Product Ratings Comparison')
+axis(2, at = seq_along(products), labels = products)
+
