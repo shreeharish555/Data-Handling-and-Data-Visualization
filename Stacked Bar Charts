@@ -1,0 +1,22 @@
+# Example data
+years <- c(2019, 2020)
+categories <- c('Category A', 'Category B', 'Category C')
+sales_2019 <- c(5000, 6000, 7000)
+sales_2020 <- c(5500, 6500, 7500)
+
+# Create stacked bar chart
+bar_width <- 0.8
+bar_spacing <- 0.1
+num_categories <- length(categories)
+
+# Define x-axis positions for bars
+x_positions <- matrix(1:(num_categories * 2), nrow = 2, byrow = TRUE)
+x_positions <- x_positions + (bar_width + bar_spacing) * (rep(seq_len(num_categories), each = 2) - 1)
+
+# Plot the bars
+plot(x_positions[1, ], sales_2019, type = 'h', col = 'blue', xlim = c(0, max(x_positions)), ylim = c(0, max(sales_2020, sales_2019)), xaxt = 'n', xlab = 'Category', ylab = 'Sales', main = 'Sales Performance by Product Category')
+lines(x_positions[2, ], sales_2020, col = 'red', lwd = 5)
+
+# Add legend
+legend('topright', legend = c('2019', '2020'), col = c('blue', 'red'), lty = 1, lwd = 5)
+
